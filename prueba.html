@@ -46,10 +46,10 @@
                     <h3 class="menu-title">Análisis general</h3><!-- /.menu-title -->
 
                     <li class="active">
-                        <a href="/users/userPage"> <i class="menu-icon fa fa-laptop"></i>Estadisticas generales</a>
+                        <a href="/users/general"> <i class="menu-icon fa fa-laptop"></i>Estadisticas generales</a>
                     </li>
                     <li>
-                        <a href="/users/streamingPage" > <i class="menu-icon ti-car"></i>Flujo vehicular en vivo</a>
+                        <a href="#" > <i class="menu-icon ti-car"></i>Flujo vehicular en vivo</a>
                     </li>
 
                     <li >
@@ -217,43 +217,117 @@
                     </div>
                 </div>
     
-                        <!--/.col-->
+                <!--/.col-->
 
-                        <div class="col-sm-6 col-lg-3">
-                                <div class="card text-white bg-flat-color-3">
-                                    <div class="card-body pb-0">
-            
-                                        <h4 class="mb-0">
-                                            <span class="count">1466006</span>
-                                        </h4>
-                                        <p class="text-light">Total</p>
-                
-                                    </div>
-                
-                                    <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                                        <canvas id="widgetChart3"></canvas>
-                                    </div>
-                                </div>
+                <div class="col-sm-6 col-lg-3">
+                        <div class="card text-white bg-flat-color-3">
+                            <div class="card-body pb-0">
+    
+                                <h4 class="mb-0">
+                                    <span class="count">1466006</span>
+                                </h4><!DOCTYPE html>
+<html>
+  <head>
+    <title>Easy example | CartoDB.js</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="https://carto.com/favicon.ico" />
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- include cartodb.js library -->
+    <script src="https://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+    <script>
+      function main() {
+        cartodb.createVis('map', 'https://documentation.cartodb.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json', {
+            shareable: true,
+            title: true,
+            description: true,
+            search: true,
+            tiles_loader: true,
+            center_lat: 0,
+            center_lon: 0,
+            zoom: 2
+        })
+        .done(function(vis, layers) {
+          // layer 0 is the base layer, layer 1 is cartodb layer
+          // setInteraction is disabled by default
+          layers[1].setInteraction(true);
+          layers[1].on('featureOver', function(e, latlng, pos, data) {
+            cartodb.log.log(e, latlng, pos, data);
+          });
+          // you can get the native map to work with it
+          var map = vis.getNativeMap();
+          // now, perform any operations you need
+          // map.setZoom(3);
+          // map.panTo([50.5, 30.5]);
+        })
+        .error(function(err) {
+          console.log(err);
+        });
+      }
+      window.onload = main;
+    </script>
+  </body>
+</html>
+                                <p class="text-light">Total</p>
+        
                             </div>
-
-                            <div class="col-xl-8">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>Resumen de Accidentabilidad</h4>
-                                        </div>
-                                        <iframe width="100%" height="520" frameborder="0" src="https://anflorezll.carto.com/builder/2c497223-2f5d-4764-b047-3d401949e587/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> <!-- /# card -->
-                                </div>  
+        
+                            <div class="chart-wrapper px-0" style="height:70px;" height="70">
+                                <canvas id="widgetChart3"></canvas>
                             </div>
-
-                <div class="col-lg-4">
+                        </div>
+                    </div>
+                <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="mb-3">Semáforos </h4>
+                                <h4 class="mb-3">Pie Chart </h4>
                                 <canvas id="pieChart"></canvas>
                             </div>
                         </div>
                     </div><!-- /# column -->
+    
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Mundo</h4>
+                        </div>
+                        <div class="Vector-map-js">
+                            <div id="vmap" class="vmap" style="height: 265px;"></div>
+                        </div>
+                    </div>
+                    <!-- /# card -->
+                </div>
 
+                <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Map</h4>
+                            </div>
+                            
+                                    <div id="mapCarto"></div>    
+                            
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                
+    
+    
+                
+
+        </div> <!-- .content -->
  
     </div><!-- /#right-panel -->
 

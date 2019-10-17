@@ -68,5 +68,16 @@ console.log(req.body)
             res.write(data);
             res.end();
             })
+      },
+
+   //If user logged previously : loads UserPage
+//If user has not log in the system, loads authentication page.
+   loadStreamingPage: function(req, res, next) {
+         fs.readFile('./app/views/streaming.html',function (err, data){
+            res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+            res.write(data);
+            res.end();
+            })
       }
-}
+   }
+

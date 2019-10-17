@@ -45,10 +45,10 @@
                 <ul class="nav navbar-nav">
                     <h3 class="menu-title">Análisis general</h3><!-- /.menu-title -->
 
-                    <li class="active">
+                    <li >
                         <a href="/users/userPage"> <i class="menu-icon fa fa-laptop"></i>Estadisticas generales</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/users/streamingPage" > <i class="menu-icon ti-car"></i>Flujo vehicular en vivo</a>
                     </li>
 
@@ -134,15 +134,10 @@
         
                 </header><!-- /header -->
         <!-- .HERE IT GOES HTML FILES    -->
-      
-      
-        <!-- Header-->
-
         <div class="breadcrumbs">
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1></h1>
                         </div>
                     </div>
                 </div>
@@ -150,129 +145,70 @@
                     <div class="page-header float-right">
                         <div class="page-title">
                             <ol class="breadcrumb text-right">
-                                <li class="active">Estadisticas generales</li>
+                                <li><a>Trafico en vivo</a></li>
+
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
-    
+
+
+
             <div class="content mt-3">
-    
-    
-    
-    
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card text-white bg-flat-color-1">
-                        <div class="card-body pb-0">
-    
-                            <h4 class="mb-0">
-                                <span class="count">875043</span>
-                            </h4>
-                            <p class="text-light">Motos</p>
-    
-                            <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                                <canvas id="widgetChart1"></canvas>
-                            </div>
-    
-                        </div>
-    
-                    </div>
-                </div>
-                <!--/.col-->
-    
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card text-white bg-flat-color-2">
-                        <div class="card-body pb-0">
-    
-                            <h4 class="mb-0">
-                                <span class="count">589463</span>
-                            </h4>
-                            <p class="text-light">Carros</p>
-    
-                            <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                                <canvas id="widgetChart2"></canvas>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
+                <div class="animated fadeIn">
 
-                <!--/.col-->
-    
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card text-white bg-flat-color-4">
-                        <div class="card-body pb-0">
-
-                            <h4 class="mb-0">
-                                <span class="count">1500</span>
-                            </h4>
-                            <p class="text-light">Bicicletas</p>
-    
-                            <div class="chart-wrapper px-3" style="height:70px;" height="70">
-                                <canvas id="widgetChart4"></canvas>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-    
-                        <!--/.col-->
-
-                        <div class="col-sm-6 col-lg-3">
-                                <div class="card text-white bg-flat-color-3">
-                                    <div class="card-body pb-0">
-            
-                                        <h4 class="mb-0">
-                                            <span class="count">1466006</span>
-                                        </h4>
-                                        <p class="text-light">Total</p>
-                
+                        <div class="col-xl-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Accidentabilidad</h4>
                                     </div>
-                
-                                    <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                                        <canvas id="widgetChart3"></canvas>
+                                    <iframe width="100%" height="520" frameborder="0" src="https://anflorezll.carto.com/builder/9e104803-a05b-48dd-b23b-f8b663287866/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-lg-11">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="mb-3">Real Chart</h4>
+                                        <div class="flot-container">
+                                            <div id="cpu-load" class="cpu-load"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                    </div>
 
-                            <div class="col-xl-8">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>Resumen de Accidentabilidad</h4>
-                                        </div>
-                                        <iframe width="100%" height="520" frameborder="0" src="https://anflorezll.carto.com/builder/2c497223-2f5d-4764-b047-3d401949e587/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> <!-- /# card -->
-                                </div>  
-                            </div>
 
-                <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="mb-3">Semáforos </h4>
-                                <canvas id="pieChart"></canvas>
-                            </div>
-                        </div>
-                    </div><!-- /# column -->
-
- 
-    </div><!-- /#right-panel -->
-
+          
     <!-- Right Panel -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    
+    <script>
+      $('#heatmapChart').epoch({
+        type: 'time.heatmap',
+        data: heatmapData
+      });
+    </script>
+
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <script src="/vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-    <script src="/vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="/js/dashboard.js"></script>
-    <script src="/js/widgets.js"></script>
-    <script src="/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="/js/init-scripts/chart-js/chartjs-init.js"></script>
-    <script src="/js/carto.js"></script>
+    <script src="/vendors/flot/excanvas.min.js"></script>
+    <script src="/vendors/flot/jquery.flot.js"></script>
+
+    <script src="/vendors/flot/jquery.flot.time.js"></script>
+    <script src="/vendors/flot/jquery.flot.stack.js"></script>  
+
+    <script src="/js/init-scripts/flot-chart/curvedLines.js"></script>
+    <script src="/js/init-scripts/flot-chart/flot-tooltip/jquery.flot.tooltip.min.js"></script>
+    <script src="/js/init-scripts/flot-chart/flot-chart-init.js"></script>
+    <script src="/vendors/peity/jquery.peity.min.js"></script>
+
+    <script src="/js/init-scripts/peitychart/peitychart.init.js"></script>
     <script>
         
         (function($) {

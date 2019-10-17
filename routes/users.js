@@ -10,4 +10,5 @@ router.post('/logoutUser', userController.logout);
 router.get('/registerUser',userController.loadRegister)
 router.get('/authenticateUser',userController.loadAuthenticate)
 router.get('/userPage',userController.loadUserPage)
+router.get('/streamingPage',userController.loadStreamingPage)
 module.exports = router;
