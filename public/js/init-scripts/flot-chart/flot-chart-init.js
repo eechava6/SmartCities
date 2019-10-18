@@ -20,12 +20,12 @@
             while ( data.length < totalPoints ) {
 
                 var prev = data.length > 0 ? data[ data.length - 1 ] : 50,
-                    y = prev + Math.random() * 10 - 5;
+                    y = prev + (Math.random() * 9.5 - 4.5)*100;
 
                 if ( y < 0 ) {
                     y = 0;
-                } else if ( y > 100 ) {
-                    y = 100;
+                } else if ( y > 20000 ) {
+                    y = 20000;
                 }
 
                 data.push( y );
@@ -63,7 +63,7 @@
             },
             yaxis: {
                 min: 0,
-                max: 100
+                max: 20000
             },
             xaxis: {
                 show: false

@@ -34,33 +34,6 @@
         }
     } );
 
-    var heatmapData = [
-        // First Series
-        {
-          label: 'Series 1',
-          values: [
-            {
-              time: 1370044800,
-              histogram: {
-                18: 49,
-                104: 10,
-      
-              }
-            },
-      
-            {
-              time: 1370044801,
-              histogram: {
-                9: 8,
-                120: 17,
-           
-              }
-            },
-          ]
-        },
-      
-  
-      ];
 } )( jQuery );
 
 

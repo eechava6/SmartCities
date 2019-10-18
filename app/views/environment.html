@@ -48,25 +48,27 @@
                     <li >
                         <a href="/users/userPage"> <i class="menu-icon fa fa-laptop"></i>Estadisticas generales</a>
                     </li>
-                    <li class="active">
+                    <li >
                         <a href="/users/streamingPage" > <i class="menu-icon ti-car"></i>Flujo vehicular en vivo</a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="/users/environmentPage"> <i class="menu-icon fa fa-pagelines"></i>Análisis ambiental</a>
                     </li>
 
                     <li>
-                        <a href="/users/historyPage" > <i class="menu-icon fa fa-bar-chart"></i>Historico</a>
+                            <a href="/users/historyPage" > <i class="menu-icon fa fa-bar-chart"></i>Historico</a>
                     </li>
+
                     <h3 class="menu-title">Predicciones</h3><!-- /.menu-title -->
 
-                    <li >
+                    <li>
                         <a href="/users/accidentPredictionPage"> <i class="menu-icon fa fa-tasks"></i>Accidentabilidad</a>
                     </li>
                     <li>
                         <a href="#"> <i class="menu-icon fa fa-calendar"></i>Fechas festivas</a>
                     </li>
+
 
                     <li>
                         <a href="#"> <i class="menu-icon fa fa-area-chart"></i>Semáforos</a>
@@ -135,145 +137,49 @@
                 </header><!-- /header -->
         <!-- .HERE IT GOES HTML FILES    -->
         <div class="breadcrumbs">
-                <div class="col-sm-4">
-                    <div class="page-header float-left">
-                        <div class="page-title">
-                        </div>
+                <div class="col-lg-12">
+                        <iframe width="100%" height="520" frameborder="0" src="https://sebastianospina51.carto.com/builder/e9b9ae81-258a-4271-8440-dd384d220f0f/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="page-header float-right">
-                        <div class="page-title">
-                            <ol class="breadcrumb text-right">
-                                <li><a>Trafico en vivo</a></li>
-
-                            </ol>
-                        </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mb-2"> Promedio particulas Pm2.5 en una hora  por mes - Primer semestre </h4>
+                        <canvas id="lineChart2"></canvas>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="stat-widget-four">
-                                <div class="stat-icon dib">
-                                    <i class="ti-camera text-muted"></i>
-                                </div>
-                                <div class="stat-content">
-                                    <div class="text-left dib">
-                                        <div class="stat-heading">Cámaras</div>
-                                        <div class="stat-text">2375</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <h4 class="mb-2">Promedio particulas Pm2.5 en una hora  por mes - Segundo semestre </h4>
+                            <canvas id="lineChart"></canvas>
                         </div>
                     </div>
                 </div>
-
-            <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="stat-widget-four">
-                                <div class="stat-icon dib">
-                                    <i class="ti-direction-alt text-muted"></i>
-                                </div>
-                                <div class="stat-content">
-                                    <div class="text-left dib">
-                                        <div class="stat-heading">Semáforos</div>
-                                        <div class="stat-text">689</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="stat-widget-four">
-                                <div class="stat-icon dib">
-                                    <i class="ti-cloud text-muted"></i>
-                                </div>
-                                <div class="stat-content">
-                                    <div class="text-left dib">
-                                        <div class="stat-heading">Clima</div>
-                                        <div class="stat-text">Lluvioso</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="stat-widget-four">
-                                <div class="stat-icon dib">
-                                    <i class="ti-user text-muted"></i>
-                                </div>
-                                <div class="stat-content">
-                                    <div class="text-left dib">
-                                        <div class="stat-heading">Agentes</div>
-                                        <div class="stat-text">715</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="content mt-3">
-                
-                <div class="animated fadeIn">
-
-                    
-                        <div class="col-xl-8">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Accidentabilidad</h4>
-                                    </div>
-                                    <iframe width="100%" height="520" frameborder="0" src="https://anflorezll.carto.com/builder/9e104803-a05b-48dd-b23b-f8b663287866/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-                            </div>  
-                        </div>
-                    </div>
-
-                    <div class="row">
-                            <div class="col-lg-11">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="mb-3">Flujo vehicular</h4>
-                                        <div class="flot-container">
-                                            <div id="cpu-load" class="cpu-load"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-
-
           
     <!-- Right Panel -->
+    
+    <script>
+      $('#heatmapChart').epoch({
+        type: 'time.heatmap',
+        data: heatmapData
+      });
+    </script>
+
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <script src="/vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="/vendors/chart.js/dist/Chart.bundle.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script src="/vendors/flot/excanvas.min.js"></script>
-    <script src="/vendors/flot/jquery.flot.js"></script>
-
-    <script src="/vendors/flot/jquery.flot.time.js"></script>
-    <script src="/vendors/flot/jquery.flot.stack.js"></script>  
-
-    <script src="/js/init-scripts/flot-chart/curvedLines.js"></script>
-    <script src="/js/init-scripts/flot-chart/flot-tooltip/jquery.flot.tooltip.min.js"></script>
-    <script src="/js/init-scripts/flot-chart/flot-chart-init.js"></script>
+    <script src="/vendors/flot/excanvas.min.js"></script>  
     <script src="/vendors/peity/jquery.peity.min.js"></script>
 
-    <script src="/js/init-scripts/peitychart/peitychart.init.js"></script>
+    <script src="/js/init-scripts/chart-js/line.js"></script>
+
     <script>
         
         (function($) {

@@ -11,4 +11,7 @@ router.get('/registerUser',userController.loadRegister)
 router.get('/authenticateUser',userController.loadAuthenticate)
 router.get('/userPage',userController.loadUserPage)
 router.get('/streamingPage',userController.loadStreamingPage)
+router.get('/accidentPredictionPage',userController.loadPredicctionAccidentPage)
+router.get('/environmentPage',userController.loadEnvironmentPage)
+router.get('/historyPage',userController.loadHistoryPage)
 module.exports = router;

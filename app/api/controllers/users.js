@@ -78,6 +78,34 @@ console.log(req.body)
             res.write(data);
             res.end();
             })
+      },
+
+         //If user logged previously : loads UserPage
+//If user has not log in the system, loads authentication page.
+   loadPredicctionAccidentPage: function(req, res, next) {
+      fs.readFile('./app/views/accidentPre.html',function (err, data){
+         res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+         res.write(data);
+         res.end();
+         })
+   },
+
+   //If user has not log in the system, loads authentication page.
+   loadEnvironmentPage: function(req, res, next) {
+      fs.readFile('./app/views/environment.html',function (err, data){
+         res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+         res.write(data);
+         res.end();
+         })
+   },
+
+      //If user has not log in the system, loads authentication page.
+      loadHistoryPage: function(req, res, next) {
+         fs.readFile('./app/views/history.html',function (err, data){
+            res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+            res.write(data);
+            res.end();
+            })
       }
-   }
+}
 
