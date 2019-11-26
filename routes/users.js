@@ -14,4 +14,6 @@ router.get('/streamingPage',userController.loadStreamingPage)
 router.get('/accidentPredictionPage',userController.loadPredicctionAccidentPage)
 router.get('/environmentPage',userController.loadEnvironmentPage)
 router.get('/historyPage',userController.loadHistoryPage)
+router.get('/lightsPage',userController.loadLightsPage)
+
 module.exports = router;
